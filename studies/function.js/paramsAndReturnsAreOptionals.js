@@ -1,5 +1,5 @@
-function area(length, high) {
-    const area = length * high
+function area(length, height) {
+    const area = length * height
     if (area > 20) {
         console.log(`Value above the allowed: ${area}m2.`)    
     } else {
