@@ -1,22 +1,19 @@
-class Car {
-    constructor(maxSpeed = 200, delta = 5) {
-        // private attribute
-        let currentSpeed = 0
+function Car(maxSpeed = 200, delta = 5) {
+    // private attribute
+    let currentSpeed = 0
 
-        // public method (this makes public)
-        this.speedUp = function () {
-            if (currentSpeed + delta <= maxSpeed) {
-                currentSpeed += delta
-            }
-            else {
-                currentSpeed = maxSpeed
-            }
-
+    // public method (this makes public)
+    this.speedUp = function () {
+        if (currentSpeed + delta <= maxSpeed) {
+            currentSpeed += delta
         }
-        // public method
-        this.getCurrentSpeed = function () {
-            return currentSpeed
+        else {
+            currentSpeed = maxSpeed
         }
+    }
+    // public method
+    this.getCurrentSpeed = function () {
+        return currentSpeed
     }
 }
 
