@@ -1,5 +1,5 @@
 function generateNumbersBetween(min, max) {
-    if(min > max) {[x, y] = [min, max]}
+    if(min > max) {[max, min] = [min, max]}
 
     return new Promise(resolve => {
         const factor = max - min +1
