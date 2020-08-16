@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Specificity CSS</title>
+    <style>        
+        /* SPECIFICITY
+        1. !important rule
+        2. More specific selectors
+        3. Last processed rule (in case of a tie)
+         */
+
+         p {
+             background-color: #aaa;
+         }
+         .note {
+             background-color: #5f5;
+             border: dashed 5px;
+             padding: 200px;
+             font-size: 40px;
+         }
+
+         p.note {
+             padding: 2px;
+             background: linear-gradient(to right, red, yellow);
+
+         }
+
+    </style>
+</head>
+
+<body>
+    <p class='note'>Look at this note!!!!</p>
+</body>
+
+</html>
