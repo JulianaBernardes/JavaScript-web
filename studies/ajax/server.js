@@ -36,4 +36,14 @@ app.post('/form', (req, res) => {
     })
 })
 
+app.get('/evenOrOdd/', (req, res) => {
+    // req.body
+    // req.query
+    // req.params
+    const even = parseInt(req.query.number) % 2 === 0
+    res.send({
+        result: even ? 'even' : 'odd'
+    })
+})
+
 app.listen(8080, () => console.log('Executing...'))
