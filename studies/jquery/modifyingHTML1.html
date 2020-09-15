@@ -3,18 +3,38 @@
 
 <head>
     <meta charset='UTF-8'>
-    <title>Modificando HTML #01</title>
-    <link rel='stylesheet' href='css/estilo.css'>
+    <title>Modifying HTML #01</title>
+    <link rel='stylesheet' href='css/style.css'>
     <script src='js/jquery.js'></script>
 </head>
 
-<body class='conteudo exercicio'>
-    <h1>Modificando HTML #01</h1>
-    <div id='conteudo1'></div>
-    <div id='conteudo2'></div>
-    <div id='conteudo3'></div>
-
+<body class='content exercise'>
+    <h1>Modifying HTML #01</h1>
+    <div id='content1'></div>
+    <div id='content2'></div>
+    <div id='content3'></div>
+    <div>No ID</div>
     <script>
-        // ...
+        // Content 1
+        $('#content1').append('<p>1</p>')
+
+        // Content 2
+        const elements = [
+            $('<li></li>').append('Rice'),
+            $('<li>').append('Bean'),
+            $('<li>').append('Meat')
+        ]
+
+        const list = $('<ul><li>Ice Cream</li></ul>')
+            .prepend(elements) //prepend appends before
+        $('#content2').append(list)
+
+        // Content 3
+        $('#content3').append(['<h1>1</h1>','<h1>2</h1>']).prepend('<h1>0</h1>')
+        $('#content3').html('<h1>123<h1/>') // html replaces content
+        $('#content3').text('<h1>123<h1/>')
+
+        // Modyfing all
+        $('div[id]').html('<strong>"html" modifies all</strong>')
     </script>
 </body>
