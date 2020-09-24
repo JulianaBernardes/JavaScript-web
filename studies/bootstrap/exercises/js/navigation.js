@@ -1,5 +1,5 @@
 (function () {
-    function navegarViaAjax(hash) {
+    function navigateViaAjax(hash) {
         if (!hash) return
 
         const link = document.querySelector(`[wm-link='${hash}']`)
@@ -15,24 +15,24 @@
             })
     }
 
-    function configurarLinks() {
+    function configureLinks() {
         document.querySelectorAll('[wm-link]')
             .forEach(link => {
                 link.href = link.attributes['wm-link'].value
             })
     }
 
-    function navegacaoInicial() {
+    function initialNavigation() {
         if (location.hash) {
-            navegarViaAjax(location.hash)
+            navigateViaAjax(location.hash)
         } else {
-            const primeiroLink = document.querySelector('[wm-link]')
-            navegarViaAjax(primeiroLink.hash)
+            const firstLink = document.querySelector('[wm-link]')
+            navigateViaAjax(firstLink.hash)
         }
     }
 
-    window.onhashchange = e => navegarViaAjax(location.hash)
+    window.onhashchange = e => navigateViaAjax(location.hash)
     
-    configurarLinks()
-    navegacaoInicial()
+    configureLinks()
+    initialNavigation()
 })()
