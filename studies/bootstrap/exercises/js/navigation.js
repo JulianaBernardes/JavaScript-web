@@ -12,6 +12,7 @@
             .then(resp => resp.text())
             .then(html => {
                 destiny.innerHTML = html
+                eval(html.match(/\<script\>([\s\S]*)\<\/script\>/)[1])
             })
     }
 

@@ -147,6 +147,15 @@
 <hr>
 
 <!-- Tooltip -->
+<div>
+    <div class="alert alert-warning">
+        Need to call JS function!
+        <strong>And now?</strong>
+    </div>
+
+    <button class="btn btn-danger" data-toggle="tooltip" data-placement="right" 
+    title="Think before!">Delete</button>
+</div>
 
 <h1 class="mt-5">6. Slider -
     <small>
@@ -167,5 +176,6 @@
 <!-- Accordion -->
 
 <script>
-    // ...
+    //Don't work. Needs eval() in nagivation.js
+    $('[data-toggle="tooltip"]').tooltip()
 </script>
