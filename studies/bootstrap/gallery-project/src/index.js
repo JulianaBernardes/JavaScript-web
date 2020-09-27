@@ -1,9 +1,9 @@
-// SASS
+//SASS Files
 import './scss/index.scss'
 
-// dependencies
+//Dependencies
 import 'jquery'
 import 'bootstrap'
 
-// My JS files
-import './js/core/includes'
+//My JS files
+import'./js/core/includes'
